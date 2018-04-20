@@ -1,0 +1,59 @@
+#field {
+    position: absolute;
+    top: 230px;
+    left: calc(50% - 370px);
+    width: 740px;
+    height: 400px;
+    background: url("../img/field.png") no-repeat center center;
+    background-size: 100%;
+}
+#land-grid {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        img {
+            width: 200px;
+            height: 90px;
+        }
+    }
+}
+#A1 {
+    top: 28px;
+    left: 272px;
+}
+#A2 {
+    top: 91px;
+    left: 393px;
+}
+#A3 {
+    top: 155px;
+    left: 516px;
+}
+#B1 {
+    top: 84px;
+    left: 157px;
+}
+#B2 {
+    top: 146px;
+    left: 281px;
+}
+#B3 {
+    top: 210px;
+    left: 402px;
+}
+#C1 {
+    top: 142px;
+    left: 42px;
+}
+#C2 {
+    top: 204px;
+    left: 166px;
+}
+#C3 {
+    top: 268px;
+    left: 287px;
+}

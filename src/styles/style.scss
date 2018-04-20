@@ -1,0 +1,160 @@
+body {
+    color: #c4cec4;
+    position: relative;
+    height: 100vh;
+    background: url("../img/land.png") no-repeat;
+    background-size: cover;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.ornamentals {
+    width: 1500px;
+    height: 100vh;
+    margin: 0 auto;
+    background: url(../img/ornamentals.png) no-repeat;
+    background-size: cover;
+}
+
+@import "_field.scss";
+
+#inventory, #shop, #barn {
+    position: fixed;
+    background-color: rgba(95,84,74, 0.7);
+    border: 3px solid rgba(95,84,74, 0.9);
+    border-radius: 10px;
+}
+
+#inventory {
+    left: calc(50% - 325px);
+    bottom: -10px;
+    width: 650px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    > div {
+        margin-left: 14px;
+        margin-right: 14px;
+        cursor: pointer;
+    }
+
+    img {
+        width: 60px;
+        cursor: pointer;
+    }
+}
+
+#shop {
+    left: -156px;
+    top: 6px;
+    width: 150px;
+    height: 600px;
+    transition: left 0.5s ease-in-out;
+    
+    img{
+        width: 60px;
+        cursor: pointer;
+    }
+}
+
+#seeds_list > div {
+    margin: 20px 10px 0 20px;
+    position: relative;
+}
+
+.seed_price::after {
+    content: "$";
+}
+
+.product_among::before {
+    content: " x";
+    font-size: 12px;
+    vertical-align: text-top;
+}
+
+#shop_btn {
+    position: absolute;
+    top: 44px;
+    left: 81%;
+    font-size: 20px;
+    padding: 8px 25px;
+    background-color: rgba(95,84,74,.6);
+    border: 3px solid rgba(95,84,74,.9);
+    border-radius: 10px 10px 0 0;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.show_shop {
+    left: -16px !important;
+}
+
+.notification {
+    font-family: Arial,Helvetica,sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    top: -24px;
+    left: 62%;
+    color: #e3e6e1!important;
+    width: max-content;
+    font-size: 14px;
+    padding: 5px 8px;
+    background-color: rgba(128, 118, 109, 0.6);
+    border: 2px solid rgba(138, 125, 114, 0.9);
+    border-radius: 10px 6px 10px 0;
+    transition: all 0.3s ease-in;
+}
+
+.show_notification {
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+#money {
+    position: fixed;
+    top: 5px;
+    right: 80px;
+    font-size: 18px;
+    color: #e4e8e1;
+}
+
+#barn {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    top: 30px;
+    right: -16px;
+    width: 270px;
+    height: 200px;
+    font-size: 14px;
+
+    > div {
+        margin: 7px 10px;
+    }
+
+    img {
+        width: 45px;
+    }
+}
+
+.sell_btn {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 133px / 2) ;
+    color: #c4cec4;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 18px;
+    padding: 3px 40px;
+    background-color: rgba(138, 123, 110, 0.6);
+    border: 2px solid rgba(146, 133, 121, 0.9);
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsla(28, 6%, 57%, 0.7);
+        border: 2px solid rgba(146, 133, 121, 0.7);
+    }
+}
